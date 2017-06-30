@@ -1,0 +1,26 @@
+﻿<ion-list>
+  <ion-item-sliding *ngFor="let entity of entityList" #item>
+    <ion-item (click)="navigateToDetail(entity.id)">
+      <ion-avatar item-left>
+        <img src="http://modexenergy.com/wp-content/themes/modex_wp/img/avatar.png">
+      </ion-avatar>
+      <h2>{{ entity.email }}</h2>
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item-options side="right">
+      <button ion-button color="danger"  *ngIf="config && config.canDelete" (click)="delete(entity.id)">
+        <ion-icon name="trash"></ion-icon>Delete
+      </button>
+      <button ion-button color="dark" >
+        <ion-icon name="more"></ion-icon>More
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+  <ion-list-header>
+    <button *ngIf="config && config.canCreate" (click)="create()"
+            ion-button full color="secondary">
+      Create New<ion-icon name="add"></ion-icon>
+    </button>
+  </ion-list-header>
+</ion-list>
+

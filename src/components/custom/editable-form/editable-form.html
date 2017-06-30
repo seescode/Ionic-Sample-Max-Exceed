@@ -1,0 +1,16 @@
+﻿<ion-list>
+  <div ion-item padding>
+    <button ion-button item-right large (click)="toggleEdit()">
+      <ion-icon name="create"></ion-icon>
+    </button>
+  </div>
+  <ion-card-content>
+    <ng-content>
+    </ng-content>
+  </ion-card-content>
+    <ion-item *ngIf="editOptions.isEditing" padding-horizontal>
+      <button ion-button color="secondary" item-right large (click)="save()">
+        <ion-icon name="save"></ion-icon>Save
+      </button>
+    </ion-item>
+</ion-list>

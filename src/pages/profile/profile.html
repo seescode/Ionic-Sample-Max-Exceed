@@ -1,0 +1,26 @@
+﻿<!--<astoot-layout [pageName]="pageName">-->
+  <ion-content padding-horizontal>
+    <editable-form #editForm [basePage]="this">
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center>
+            <ion-img [width]="250" [height]="250" src="https://www.fancyhands.com/images/default-avatar-250x250.png"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <inline-edit [(ngModel)]="entity && entity.firstName"
+                   label="First Name:" [editOptions]="editForm.getEditOptions()"
+                   [required]="true" type="text">
+      </inline-edit>
+      <inline-edit [(ngModel)]="entity && entity.lastName"
+                   label="Last Name:" [editOptions]="editForm.getEditOptions()"
+                   [required]="true" type="text">
+      </inline-edit>
+      <inline-edit [(ngModel)]="entity && entity.email"
+                   label="Email:" [editOptions]="editForm.getEditOptions()"
+                   [required]="true" type="text">
+      </inline-edit>
+    </editable-form>
+  </ion-content>
+<!--</astoot-layout>-->

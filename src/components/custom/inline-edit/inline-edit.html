@@ -1,0 +1,8 @@
+﻿<ion-item [hidden]="editOptions.isEditing">
+  <ion-note color="primary">{{label}}</ion-note>
+  <ion-note class="inline-edit"> {{value}}&nbsp;</ion-note>
+</ion-item>
+<ion-item [hidden]="!editOptions.isEditing">
+  <ion-label color="primary">{{label}}</ion-label>
+  <ion-input [(ngModel)]="value" [required]="required" [type]="type" [name]="value"></ion-input>
+</ion-item>
