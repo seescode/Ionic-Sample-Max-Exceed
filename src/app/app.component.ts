@@ -1,4 +1,5 @@
-﻿import { Component, ViewChild } from '@angular/core';
+﻿import { TabsPage } from './../pages/tabs/tabs';
+import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
@@ -15,7 +16,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage: any = UsersPage;
+  rootPage: any = TabsPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(

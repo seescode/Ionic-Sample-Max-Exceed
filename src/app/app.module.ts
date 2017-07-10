@@ -1,4 +1,5 @@
-﻿import { NgModule, ErrorHandler } from '@angular/core';
+﻿import { TabsPage } from './../pages/tabs/tabs';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
 import { MyApp } from './app.component';
@@ -29,7 +30,8 @@ import { httpFactory } from '../rules/http-factory/http-factory'
       EditableFormComponent,
       AstootLayoutComponent,
       CrudLayoutComponent,
-      PageListBaseComponent
+      PageListBaseComponent,
+      TabsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -38,7 +40,8 @@ import { httpFactory } from '../rules/http-factory/http-factory'
   entryComponents: [
       MyApp,
       UsersPage,
-      ProfilePage
+      ProfilePage,
+      TabsPage
   ],
   providers: [
     Users,

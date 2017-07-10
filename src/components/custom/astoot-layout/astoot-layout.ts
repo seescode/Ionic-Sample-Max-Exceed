@@ -1,6 +1,4 @@
 ﻿import { Component, Input } from '@angular/core';
-import { UsersPage } from "../../../pages/users/users";
-import { ProfilePage } from "../../../pages/profile/profile";
 import { Tabs } from 'ionic-angular';
 
 /*
@@ -14,10 +12,6 @@ import { Tabs } from 'ionic-angular';
   templateUrl: 'astoot-layout.html'
 })
 export class AstootLayoutComponent {
-    
+
   @Input() pageName: string;
-
-  usersPage: any = UsersPage;
-  profilePage: any = ProfilePage;
-
 }
